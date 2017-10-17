@@ -2,7 +2,7 @@ package 剑指offer;
 
 /**
  * Created by MelloChan on 2017/10/16.
- * 单例模式总结
+ * 单例模式
  */
 public class No02 {
 }
