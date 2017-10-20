@@ -14,6 +14,12 @@ public class No08 {
 //        int[] array=null;
         int min = new Solution08().minNumberInRotateArray(array);
         System.out.println("min:" + min);
+        //特例 以下两种情况下,无法分辨中间值 1 是属于左边递增数组还是右边递增数组,此时只能选择遍历
+//        int[] array1=new int[]{1,1,1,0,1};
+//        int[] array2=new int[]{1,0,1,1,1};
+//        int min = new Solution08().minNumberInRotateArray(array2);
+//        System.out.println("min:" + min);
+
     }
 }
 
@@ -28,18 +34,37 @@ class Solution08 {
             return 0;
         }
         int first = 0, second = array.length - 1;
+        //移动0个元素的情况 直接返回索引0处
+        int mid = first;
         while (array[first] >= array[second]) {
             if (second - first == 1) {
+                mid = second;
                 break;
             }
-            int mid = (first + second) / 2;
+            mid = (first + second) / 2;
+            //保证特例情况
+            if (array[first] == array[second] && array[first] == array[mid]) {
+                return minNumberInRotateArray(array, first, second);
+            }
             if (array[first] <= array[mid]) {
                 first = mid;
+            } else {
+                if (array[second] >= array[mid]) {
+                    second = mid;
+                }
             }
-            if (array[second] >= array[mid]) {
-                second = mid;
+
+        }
+        return array[mid];
+    }
+
+    public int minNumberInRotateArray(int[] array, int first, int second) {
+        int result = array[first];
+        for (int i = 1; i <= second; i++) {
+            if (result > array[i]) {
+                result = array[i];
             }
         }
-        return array[second];
+        return result;
     }
 }
