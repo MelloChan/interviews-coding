@@ -13,9 +13,11 @@ public class No05 {
         ListNode l2 = new ListNode(12);
         ListNode l3 = new ListNode(31);
         ListNode l4 = new ListNode(21);
+        ListNode l5 = new ListNode(55);
         l1.next = l2;
         l2.next = l3;
         l3.next = l4;
+        l4.next = l5;
         System.out.println(new Solution05().printListFromTailToHead(l1));
     }
 }
