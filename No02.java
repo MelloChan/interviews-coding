@@ -86,7 +86,7 @@ class Singleton04 {
  */
 class Singleton05 {
     private static class Singleton {
-        public static Singleton05 singleton05 = new Singleton05();
+        static Singleton05 singleton05 = new Singleton05();
     }
 
     public static Singleton05 getInstance() {
