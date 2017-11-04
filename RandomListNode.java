@@ -5,9 +5,9 @@ package 剑指offer;
  * Created by MelloChan on 2017/11/2.
  */
 public class RandomListNode {
-    private int label;
-    private RandomListNode next = null;
-    private RandomListNode random = null;
+    int label;
+    RandomListNode next = null;
+    RandomListNode random = null;
 
     RandomListNode(int label) {
         this.label = label;
