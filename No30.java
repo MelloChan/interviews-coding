@@ -16,7 +16,7 @@ public class No30 {
 }
 
 /**
- * 解决方案:
+ * 解决方案: 方案①:快排思想
  */
 class Solution30{
     public ArrayList<Integer> getLeastNumbers(int [] input, int k) {
