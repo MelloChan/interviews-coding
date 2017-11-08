@@ -88,7 +88,8 @@ class Singleton05 {
     private static class Singleton {
         static Singleton05 singleton05 = new Singleton05();
     }
-
+    private Singleton05() {
+    }
     public static Singleton05 getInstance() {
         return Singleton.singleton05;
     }
