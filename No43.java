@@ -1,6 +1,5 @@
-package 剑指offer;
+﻿package 剑指offer;
 
-import java.util.Arrays;
 
 /**
  * 翻转单词序列
